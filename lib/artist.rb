@@ -20,5 +20,6 @@ class Artist
   def new_song(name, genre = "")
     binding.pry
     Song.new(name, self.name, genre)
+    song
   end
 end
