@@ -28,6 +28,5 @@ class Artist
       artist_genres << song.genre unless artist_genres.include?(song.genre)
     end
     artist_genres
-
   end
 end
