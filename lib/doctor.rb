@@ -20,4 +20,13 @@ class Doctor
   def new_appointment(date, patient)
     Appointment.new(date, patient, self)
   end
+
+  def paitents
+    doctor_patients = []
+    self.appointments.each do |appointment|
+      doctor_patients << appointment.patient unless doctor_patients.include?(appointment.patient)
+    end
+    doctor_patients
+
+  end
 end
