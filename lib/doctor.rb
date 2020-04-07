@@ -27,6 +27,5 @@ class Doctor
       doctor_patients << appointment.patient unless doctor_patients.include?(appointment.patient)
     end
     doctor_patients
-
   end
 end
