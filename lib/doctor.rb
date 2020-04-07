@@ -21,7 +21,7 @@ class Doctor
     Appointment.new(date, patient, self)
   end
 
-  def paitents
+  def patients
     doctor_patients = []
     self.appointments.each do |appointment|
       doctor_patients << appointment.patient unless doctor_patient.include?(appointment.patient)
