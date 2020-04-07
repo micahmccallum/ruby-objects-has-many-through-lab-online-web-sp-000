@@ -18,7 +18,7 @@ class Genre
 
   def artists
     genre_artists = []
-    Song.all.each do |song|
+    self.songs.each do |song|
       genre_artists << song.artist unless genre_artists.include?(song.artist)
     end
     genre_artists
