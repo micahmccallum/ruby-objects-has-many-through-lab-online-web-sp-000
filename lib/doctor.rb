@@ -13,6 +13,7 @@ class Doctor
   end
 
   def appointments
+    binding.pry
     Appointment.all.select { |appointment| appointment.doctor == self }
   end
 end
