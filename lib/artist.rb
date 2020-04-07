@@ -24,6 +24,9 @@ class Artist
   end
 
   def genres
-    Genre.all.select { |genre| genre.artist == self }
+    artist_genres = []
+    self.songs.each do |song|
+      artist_genres << song.genre unless artist_genres.include?(song.genre)
+
   end
 end
