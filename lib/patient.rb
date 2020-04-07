@@ -18,9 +18,11 @@ class Patient
   end
 
   def doctors
-
-
-
+    patient_doctors = []
+    self.appointments.each do |appointment|
+      patient_doctors << appointment.doctor unless patient_doctors.include?(appointment.doctor)
+    end
+    patient_doctors
   end
 
   def appointments
