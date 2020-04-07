@@ -23,6 +23,7 @@ class Doctor
 
   def patients
     doctor_patients = []
+    binding.pry
     self.appointments.each do |appointment|
       doctor_patients << appointment.patient unless doctor_patients.include?(appointment.patient)
     end
